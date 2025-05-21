@@ -216,6 +216,9 @@ section:nth-child(even) {
     transform: translateY(-3px);
 }
 
+
+
+
 /* Header Section */
 header {
     min-height: 100vh;
@@ -225,6 +228,7 @@ header {
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding: 50px 0px 0px 20px;
 }
 
 header::before {
@@ -391,6 +395,10 @@ header::after {
     margin-bottom: 0;
 }
 
+
+
+
+
 /* Education Section */
 .education-items {
     display: flex;
@@ -445,6 +453,18 @@ header::after {
     font-weight: 600;
     margin-top: 8px;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.institution::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    margin-right: 8px;
 }
 
 .year {
@@ -496,6 +516,44 @@ header::after {
         margin-bottom: 10px;
     }
 }
+
+.certificate {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.view-certificate {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.view-certificate a {
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.view-certificate i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.certificate:hover .view-certificate a {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.certificate:hover .view-certificate i {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+
 
 
 
@@ -622,6 +680,14 @@ header::after {
     height: 100%;
 }
 
+.project-card-content h4 {
+    text-align: center;
+}
+
+.project-card-content p {
+    text-align: justify;
+}
+
 .project-card h4 {
     font-size: 1.2rem;
     margin-bottom: 12px;
@@ -644,10 +710,14 @@ header::after {
 
 .view-code {
     display: inline-flex;
+    text-decoration: none;
     align-items: center;
     color: var(--primary-color);
     font-weight: 600;
     transition: all 0.3s ease;
+}
+
+.view1 {
     padding: 8px 0;
 }
 
@@ -827,7 +897,7 @@ header::after {
     z-index: -1;
 }
 
-.contact-info h3 {
+.contact-info h3, .contact-form h3 {
     font-size: 1.6rem;
     margin-bottom: 25px;
     color: var(--primary-color);
