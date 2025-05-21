@@ -656,7 +656,7 @@ header::after {
 }
 
 .category-content.active {
-    max-height: 1000px;
+    max-height: 100000px;
 }
 
 .project-cards {
@@ -755,6 +755,34 @@ header::after {
 
 .project-card:hover .view-code i {
     transform: translateX(5px);
+}
+
+/* Your existing CSS */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+@media (max-width: 767px) {
+    .category-content {
+        /*padding: 10px;*/
+        width: 100%;
+    }
+    
+    .project-cards {
+        display: grid;
+        grid-template-columns: 1fr !important; /* Force single column on mobile */
+        gap: 20px;
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .project-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 
