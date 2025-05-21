@@ -364,6 +364,29 @@ header::after {
     }
 }
 
+@media (max-width: 767px) {
+    .header-content {
+        padding-top: 70px; /* Add space below the navigation bar */
+        flex-direction: column;
+    }
+    
+    .greeting-text h1, 
+    .greeting-text h2 {
+        margin-top: 20px; /* Add space to the greeting text */
+    }
+    
+    /* If your navigation is fixed position, add this */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+}
+
+
+
+
 /* About Section */
 .about-content {
     background-color: white;
