@@ -765,24 +765,25 @@ header::after {
     padding: 25px;
 }
 
-@media (max-width: 767px) {
-    .category-content {
-        /*padding: 10px;*/
-        width: 100%;
-    }
-    
-    .project-cards {
-        display: grid;
-        grid-template-columns: 1fr !important; /* Force single column on mobile */
-        gap: 20px;
-        padding: 15px;
-        width: 100%;
-    }
-    
-    .project-card {
-        width: 100%;
-        margin-bottom: 15px;
-    }
+@media screen and (max-width: 767px) {
+  .category-content {
+    display: block !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  .project-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+  
+  .project-card {
+    width: 100% !important;
+    margin: 0 0 20px 0 !important;
+  }
 }
 
 
