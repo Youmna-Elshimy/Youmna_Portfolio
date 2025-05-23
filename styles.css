@@ -757,33 +757,23 @@ header::after {
     transform: translateX(5px);
 }
 
-/* Your existing CSS */
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 25px;
-}
-
-@media screen and (max-width: 767px) {
-  .category-content {
-    display: block !important;
-    width: 100% !important;
-    max-height: none !important;
-    overflow: visible !important;
-  }
-  
-  .project-cards {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 20px !important;
-  }
-  
-  .project-card {
-    width: 100% !important;
-    margin: 0 0 20px 0 !important;
-  }
+@media (max-width: 767px) {
+    .category-content {
+        width: 100%;
+    }
+    
+    .project-cards {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .project-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 
