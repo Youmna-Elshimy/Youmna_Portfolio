@@ -97,4 +97,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const tableauIcon = document.querySelector('.tableau-img');
+
+    tableauIcon.addEventListener('mouseenter', () => {
+        tableauIcon.src = 'images/tableau_green.svg';
+    });
+
+    tableauIcon.addEventListener('mouseleave', () => {
+        tableauIcon.src = 'images/tableau_grey.svg';
+    });
 });
